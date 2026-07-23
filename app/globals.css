@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
-
 :root { --black:#0b0b0b; --ivory:#f1ecdf; --copper:#ff6a1a; --blue:#3157ff; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -31,6 +29,104 @@ button { color:inherit; font:inherit; }
 .eyebrow { font:500 11px "DM Mono"; letter-spacing:.14em; text-transform:uppercase; }
 .button { display:inline-flex; gap:14px; align-items:center; padding:16px 20px; font-weight:600; font-size:14px; }
 .button-copper { background:var(--copper); color:#0a0a0a; }
+
+/* FLAGSHIP — REAL IDENTITY */
+.flagship { --ink:#10110f; --paper:#eee9df; --acid:#dfff52; --royal:#2449ff; background:var(--paper); color:var(--ink); font-family:"Manrope",Arial,sans-serif; }
+.flag-nav { position:absolute; z-index:4; top:0; left:0; right:0; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:22px 3.2vw; border-bottom:1px solid rgba(255,255,255,.26); color:#fff; }
+.flag-wordmark { display:flex; align-items:center; gap:11px; font:700 11px/1.05 "DM Mono",Consolas,monospace; letter-spacing:.08em; }
+.flag-wordmark b { display:grid; place-items:center; width:34px; height:34px; border:1px solid currentColor; border-radius:50%; font:700 17px "Playfair Display",Georgia,serif; }
+.flag-nav nav { display:flex; gap:30px; font-size:11px; }
+.flag-nav nav a { opacity:.72; transition:opacity .2s; }
+.flag-nav nav a:hover { opacity:1; }
+.flag-contact { justify-self:end; display:flex; gap:12px; align-items:center; padding-bottom:5px; border-bottom:1px solid rgba(255,255,255,.7); font-size:11px; }
+.flag-hero { position:relative; min-height:100vh; display:grid; grid-template-columns:1.15fr .85fr; overflow:hidden; background:#0b0c0f; color:#fff; }
+.flag-gridlines { position:absolute; inset:0; opacity:.18; background-image:linear-gradient(rgba(255,255,255,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.18) 1px,transparent 1px); background-size:9.1vw 9.1vw; mask-image:linear-gradient(90deg,#000,transparent 75%); }
+.flag-hero-copy { position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; padding:130px 3vw 70px 5.5vw; }
+.flag-status { margin-bottom:42px; font:500 10px "DM Mono",Consolas,monospace; letter-spacing:.09em; text-transform:uppercase; color:#c4c5ca; }
+.flag-status i { display:inline-block; width:7px; height:7px; margin-right:10px; border-radius:50%; background:var(--acid); box-shadow:0 0 18px var(--acid); }
+.flag-hero h1 { position:relative; z-index:1; margin:0; font-size:clamp(65px,7.8vw,126px); line-height:.79; letter-spacing:-.073em; font-weight:650; }
+.flag-hero h1 span { font-size:.44em; letter-spacing:-.04em; color:#b6bac5; }
+.flag-hero h1 em { color:var(--acid); font:italic 600 1em "Playfair Display",Georgia,serif; }
+.flag-intro { display:grid; grid-template-columns:1fr auto; gap:40px; align-items:end; margin-top:48px; padding-top:25px; border-top:1px solid #34363e; }
+.flag-intro p { max-width:570px; margin:0; color:#b9bbc2; font-size:14px; line-height:1.75; }
+.flag-intro a { display:flex; gap:26px; align-items:center; white-space:nowrap; font-size:12px; font-weight:600; }
+.flag-intro a b { display:grid; place-items:center; width:37px; height:37px; border-radius:50%; background:var(--acid); color:#10110f; }
+.flag-portrait { position:relative; min-height:100vh; overflow:hidden; background:#5f5e62; }
+.flag-photo { position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(4,4,7,.55)),url('/apex-hero-real.jpg') 54% 37%/cover; filter:saturate(.86) contrast(1.03); }
+.flag-photo:after { content:""; position:absolute; inset:0; background:linear-gradient(135deg,rgba(36,73,255,.18),transparent 48%); mix-blend-mode:screen; }
+.flag-photo-tag { position:absolute; z-index:2; left:26px; bottom:28px; display:flex; align-items:flex-end; gap:24px; padding:18px; background:var(--acid); color:#10110f; }
+.flag-photo-tag span { writing-mode:vertical-rl; font:600 8px "DM Mono",Consolas,monospace; letter-spacing:.11em; }
+.flag-photo-tag b { font:700 21px/.85 "Manrope",Arial,sans-serif; letter-spacing:-.05em; }
+.flag-cross { position:absolute; z-index:2; color:var(--acid); font:300 35px/1 "DM Mono",monospace; }
+.flag-cross-a { top:14%; left:6%; }
+.flag-cross-b { right:5%; bottom:18%; }
+.flag-vertical { position:absolute; z-index:3; right:1.2vw; top:38%; margin:0; writing-mode:vertical-rl; font:600 8px "DM Mono",Consolas,monospace; letter-spacing:.16em; color:#fff; }
+.flag-ticker { overflow:hidden; padding:17px 0; background:var(--acid); border-bottom:1px solid var(--ink); color:#111; }
+.flag-ticker div { width:max-content; font:700 15px "DM Mono",Consolas,monospace; letter-spacing:.03em; animation:flag-marquee 20s linear infinite; }
+.flag-ticker i { margin:0 20px; color:var(--royal); font-style:normal; }
+@keyframes flag-marquee { to { transform:translateX(-45%); } }
+.flag-manifesto { display:grid; grid-template-columns:1fr 3.1fr; min-height:760px; padding:120px 5vw; border-bottom:1px solid #aaa69f; }
+.flag-section-label { display:flex; align-items:flex-start; gap:16px; font:600 9px "DM Mono",Consolas,monospace; letter-spacing:.12em; }
+.flag-section-label span { display:grid; place-items:center; width:34px; height:34px; border:1px solid; border-radius:50%; }
+.flag-section-label p { margin:12px 0; }
+.flag-manifesto-copy { align-self:center; }
+.flag-kicker { font:italic 600 25px "Playfair Display",Georgia,serif; color:#3454f5; }
+.flag-manifesto h2 { margin:22px 0 45px; font-size:clamp(57px,7.5vw,112px); line-height:.84; letter-spacing:-.07em; font-weight:600; }
+.flag-manifesto h2 em { color:#3454f5; font-family:"Playfair Display",Georgia,serif; }
+.flag-body { max-width:650px; margin-left:auto; font-size:17px; line-height:1.75; color:#5a5853; }
+.flag-disciplines { display:grid; grid-template-columns:repeat(3,1fr); background:#111; color:#eee; }
+.flag-disciplines article { min-height:570px; display:flex; flex-direction:column; padding:35px 3vw; border-right:1px solid #3b3b3b; }
+.flag-card-blue { background:var(--royal); }
+.flag-card-top { display:flex; justify-content:space-between; font:500 9px "DM Mono",Consolas,monospace; letter-spacing:.1em; }
+.flag-card-top b { color:var(--acid); font-size:18px; }
+.flag-disciplines h3 { margin:150px 0 24px; font-size:clamp(37px,4vw,58px); line-height:.94; letter-spacing:-.055em; }
+.flag-disciplines p { max-width:380px; color:#aaa; font-size:13px; line-height:1.7; }
+.flag-card-blue p { color:#cbd3ff; }
+.flag-disciplines a { width:max-content; margin-top:auto; padding-bottom:6px; border-bottom:1px solid; font-size:11px; }
+.flag-books { min-height:900px; display:grid; grid-template-columns:.8fr 1.2fr; background:#171816; color:#f2ede5; }
+.flag-books-copy { padding:110px 5vw; }
+.flag-section-light { margin-bottom:110px; color:#c7c2b9; }
+.flag-books-copy h2 { margin:20px 0 30px; font-size:clamp(60px,7vw,105px); line-height:.82; letter-spacing:-.07em; }
+.flag-books-copy h2 em { color:var(--acid); font-family:"Playfair Display",Georgia,serif; }
+.flag-books-copy>p:not(.flag-kicker) { max-width:460px; color:#aaa; line-height:1.7; }
+.flag-books-copy>a { display:inline-block; margin-top:35px; padding-bottom:7px; border-bottom:1px solid var(--acid); font-size:12px; }
+.flag-bookstage { position:relative; min-height:900px; overflow:hidden; background:var(--royal); }
+.flag-bookstage:before { content:""; position:absolute; width:650px; height:650px; left:50%; top:50%; border:1px solid rgba(255,255,255,.45); border-radius:50%; transform:translate(-50%,-50%); }
+.flag-bookstage:after { content:""; position:absolute; width:360px; height:360px; left:50%; top:50%; background:var(--acid); border-radius:50%; transform:translate(-50%,-50%); }
+.flag-book { position:absolute; z-index:2; display:flex; flex-direction:column; gap:18px; font-size:11px; font-weight:600; }
+.flag-book img { width:280px; aspect-ratio:2/3; object-fit:cover; box-shadow:0 28px 60px rgba(0,0,0,.4); }
+.flag-book-one { left:12%; top:18%; transform:rotate(-7deg); }
+.flag-book-two { right:10%; bottom:12%; transform:rotate(8deg); }
+.flag-book-two img { width:245px; }
+.flag-bookstage .flag-book:hover { transform:rotate(0) translateY(-8px); transition:transform .3s; }
+.flag-orbit-text { position:absolute; z-index:1; right:25px; top:35px; font:500 9px "DM Mono",Consolas,monospace; letter-spacing:.15em; color:#fff; }
+.flag-research { min-height:720px; display:grid; grid-template-columns:.65fr 2.2fr .7fr; gap:4vw; padding:120px 5vw; }
+.flag-research-main>p { color:#3454f5; font:italic 600 24px "Playfair Display",Georgia,serif; }
+.flag-research-main h2 { margin:30px 0 55px; font-size:clamp(50px,6vw,88px); line-height:.94; letter-spacing:-.06em; }
+.flag-research-meta { display:flex; flex-wrap:wrap; gap:8px; }
+.flag-research-meta span { padding:9px 13px; border:1px solid #aaa69f; border-radius:999px; font:500 9px "DM Mono",Consolas,monospace; text-transform:uppercase; }
+.flag-research aside { align-self:end; padding-top:20px; border-top:2px solid; }
+.flag-research aside span { color:#3454f5; font:600 9px "DM Mono",Consolas,monospace; letter-spacing:.11em; }
+.flag-research aside p { color:#65615a; font-size:13px; line-height:1.7; }
+.flag-proof { display:grid; grid-template-columns:repeat(3,150px) 1fr; gap:25px; align-items:end; padding:75px 5vw; background:var(--acid); }
+.flag-proof div { padding-right:20px; border-right:1px solid #89953e; }
+.flag-proof strong { display:block; font-size:39px; letter-spacing:-.06em; }
+.flag-proof span { font-size:10px; color:#4d541d; }
+.flag-proof blockquote { justify-self:end; margin:0; font-size:clamp(34px,4vw,62px); line-height:.95; font-weight:650; letter-spacing:-.055em; }
+.flag-proof blockquote em { color:#3454f5; font-family:"Playfair Display",Georgia,serif; }
+.flag-contact-section { min-height:820px; display:grid; grid-template-columns:.85fr 1.15fr; background:#0e0f0e; color:#fff; }
+.flag-contact-photo { position:relative; overflow:hidden; background:#545356; }
+.flag-contact-photo img { position:absolute; inset:auto 0 0; width:100%; height:100%; object-fit:cover; object-position:center bottom; filter:saturate(.75); }
+.flag-contact-photo:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(36,73,255,.2),transparent 50%,rgba(0,0,0,.2)); }
+.flag-contact-copy { display:flex; flex-direction:column; justify-content:center; padding:100px 6vw; }
+.flag-contact-copy h2 { margin:25px 0 70px; font-size:clamp(55px,6.6vw,100px); line-height:.86; letter-spacing:-.07em; }
+.flag-contact-copy h2 em { color:var(--acid); font-family:"Playfair Display",Georgia,serif; }
+.flag-contact-copy>a { width:max-content; padding:16px 20px; background:var(--acid); color:#111; font-size:13px; font-weight:600; }
+.flag-footer { display:grid; grid-template-columns:1fr auto; gap:55px; padding:60px 5vw 130px; background:#0e0f0e; color:#fff; border-top:1px solid #333; }
+.flag-wordmark-footer { font-size:10px; }
+.flag-footer>p { justify-self:end; margin:0; color:#888; font-size:11px; }
+.flag-footer>div:not(.flag-wordmark) { display:flex; gap:25px; font-size:11px; }
+.flag-footer small { justify-self:end; color:#666; }
 
 /* 01 — AUTHORITY */
 .authority { background:#0c0d0e; color:#f4efe5; font-family:"Manrope",sans-serif; }
@@ -256,6 +352,23 @@ button { color:inherit; font:inherit; }
 }
 
 @media (max-width: 900px) {
+  .flag-nav { grid-template-columns:1fr auto; }
+  .flag-nav nav { display:none; }
+  .flag-hero { grid-template-columns:1fr; min-height:auto; }
+  .flag-hero-copy { min-height:720px; padding-right:8vw; }
+  .flag-portrait { min-height:760px; }
+  .flag-manifesto { grid-template-columns:1fr; gap:70px; }
+  .flag-disciplines { grid-template-columns:1fr; }
+  .flag-disciplines article { min-height:430px; }
+  .flag-disciplines h3 { margin-top:90px; }
+  .flag-books { grid-template-columns:1fr; }
+  .flag-bookstage { min-height:780px; }
+  .flag-research { grid-template-columns:1fr; }
+  .flag-research aside { max-width:430px; }
+  .flag-proof { grid-template-columns:repeat(3,1fr); }
+  .flag-proof blockquote { grid-column:1/4; justify-self:start; margin-top:45px; }
+  .flag-contact-section { grid-template-columns:1fr; }
+  .flag-contact-photo { min-height:680px; }
   .site-nav,.story-nav { grid-template-columns:1fr auto; }
   .site-nav nav,.story-nav nav,.lab-status,.stage-nav p,.os-command { display:none; }
   .authority-hero { min-height:800px; padding-left:6vw; }
@@ -290,6 +403,42 @@ button { color:inherit; font:inherit; }
 }
 
 @media (max-width: 620px) {
+  .flag-nav { padding:17px 18px; }
+  .flag-wordmark span { display:none; }
+  .flag-contact { font-size:10px; }
+  .flag-hero-copy { min-height:670px; padding:120px 20px 55px; }
+  .flag-status { margin-bottom:32px; font-size:8px; }
+  .flag-hero h1 { font-size:clamp(58px,18vw,82px); }
+  .flag-intro { grid-template-columns:1fr; gap:22px; margin-top:36px; }
+  .flag-intro a { justify-self:start; }
+  .flag-portrait { min-height:640px; }
+  .flag-photo { background-position:52% center; }
+  .flag-vertical { display:none; }
+  .flag-manifesto { min-height:auto; padding:80px 22px 100px; gap:65px; }
+  .flag-manifesto h2 { font-size:clamp(52px,15vw,75px); }
+  .flag-body { font-size:15px; }
+  .flag-disciplines article { min-height:450px; padding:28px 22px; }
+  .flag-disciplines h3 { margin-top:95px; }
+  .flag-books-copy { padding:80px 22px; }
+  .flag-section-light { margin-bottom:65px; }
+  .flag-bookstage { min-height:680px; }
+  .flag-book img { width:185px; }
+  .flag-book-two img { width:165px; }
+  .flag-book-one { left:7%; top:14%; }
+  .flag-book-two { right:5%; bottom:12%; }
+  .flag-bookstage:before { width:480px; height:480px; }
+  .flag-bookstage:after { width:250px; height:250px; }
+  .flag-research { min-height:auto; padding:85px 22px 110px; }
+  .flag-research-main h2 { font-size:clamp(48px,13.5vw,67px); }
+  .flag-proof { grid-template-columns:repeat(3,1fr); gap:10px; padding:50px 22px 90px; }
+  .flag-proof strong { font-size:29px; }
+  .flag-proof blockquote { grid-column:1/4; font-size:38px; }
+  .flag-contact-photo { min-height:560px; }
+  .flag-contact-copy { padding:80px 22px 120px; }
+  .flag-contact-copy h2 { font-size:clamp(52px,14vw,72px); }
+  .flag-footer { grid-template-columns:1fr; gap:30px; padding:50px 22px 130px; }
+  .flag-footer>p,.flag-footer small { justify-self:start; }
+  .flag-footer>div:not(.flag-wordmark) { flex-wrap:wrap; }
   .concept-launcher { left:14px; right:14px; bottom:14px; width:auto; }
   .concept-drawer { padding:22px 18px 100px; }
   .concept-list button { grid-template-columns:30px 1fr 16px; }

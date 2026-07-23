@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 const concepts = [
+  { id: "flagship", number: "★", label: "Apex Flagship", note: "The definitive build" },
   { id: "authority", number: "01", label: "Obsidian Authority", note: "Best overall" },
   { id: "editorial", number: "02", label: "The Editorial", note: "For ideas & books" },
   { id: "lab", number: "03", label: "Future Lab", note: "For innovation" },
@@ -19,6 +20,127 @@ function Brand({ light = false }) {
       <span className="brand-mark">A</span>
       <span>AJUZIEOGU</span>
     </a>
+  );
+}
+
+function Flagship() {
+  return (
+    <main className="concept flagship" id="top">
+      <header className="flag-nav">
+        <a className="flag-wordmark" href="#top"><b>A</b><span>UCHECHUKWU<br/>AJUZIEOGU</span></a>
+        <nav><a href="#practice">Practice</a><a href="#books">Books</a><a href="#research">Research</a><a href="#contact">Contact</a></nav>
+        <a className="flag-contact" href="mailto:uche@ajuzieogu.com">Start a conversation <Arrow /></a>
+      </header>
+
+      <section className="flag-hero">
+        <div className="flag-gridlines" />
+        <div className="flag-hero-copy">
+          <div className="flag-status"><i/> Independent technologist · Lagos / Global</div>
+          <h1><span>I turn complex</span><br/>ideas into<br/><em>useful things.</em></h1>
+          <div className="flag-intro">
+            <p>Uchechukwu “Apex” Ajuzieogu is a technologist, author, researcher and entrepreneur working across AI, education and enterprise.</p>
+            <a href="#practice">Explore the work <b>↓</b></a>
+          </div>
+        </div>
+        <div className="flag-portrait">
+          <div className="flag-photo" />
+          <div className="flag-photo-tag"><span>APEX / 001</span><b>BUILD.<br/>WRITE.<br/>QUESTION.</b></div>
+          <div className="flag-cross flag-cross-a">+</div>
+          <div className="flag-cross flag-cross-b">+</div>
+        </div>
+        <p className="flag-vertical">GROW YOUR PASSION, REGARDLESS®</p>
+      </section>
+
+      <section className="flag-ticker" aria-label="Areas of practice">
+        <div>ARTIFICIAL INTELLIGENCE <i>✦</i> MODERN EDUCATION <i>✦</i> AFRICAN ENTERPRISE <i>✦</i> RESEARCH <i>✦</i> TECHNOLOGY <i>✦</i></div>
+      </section>
+
+      <section className="flag-manifesto" id="practice">
+        <div className="flag-section-label"><span>01</span><p>THE PRACTICE</p></div>
+        <div className="flag-manifesto-copy">
+          <p className="flag-kicker">Technology is not the point.</p>
+          <h2>The point is what<br/>people can do <em>with it.</em></h2>
+          <p className="flag-body">My work moves between code, classrooms, companies and culture. Different arenas—one consistent question: how do we turn knowledge into wider human possibility?</p>
+        </div>
+      </section>
+
+      <section className="flag-disciplines">
+        <article>
+          <div className="flag-card-top"><span>01 / BUILD</span><b>↗</b></div>
+          <h3>Technology &<br/>enterprise</h3>
+          <p>Building digital products and companies designed around real human needs.</p>
+          <a href="https://rovamedia.com/team/uchechukwu-ajuzieogu/" target="_blank">Explore Rovamedia <Arrow /></a>
+        </article>
+        <article className="flag-card-blue">
+          <div className="flag-card-top"><span>02 / STUDY</span><b>↗</b></div>
+          <h3>Research &<br/>education</h3>
+          <p>Investigating AI and vocational education systems with context and agency at the center.</p>
+          <a href="#research">View research focus <Arrow /></a>
+        </article>
+        <article>
+          <div className="flag-card-top"><span>03 / SHARE</span><b>↗</b></div>
+          <h3>Books &<br/>public ideas</h3>
+          <p>Making complex technology, enterprise and cultural knowledge accessible.</p>
+          <a href="#books">Open the library <Arrow /></a>
+        </article>
+      </section>
+
+      <section className="flag-books" id="books">
+        <div className="flag-books-copy">
+          <div className="flag-section-label flag-section-light"><span>02</span><p>THE LIBRARY</p></div>
+          <p className="flag-kicker">Published work</p>
+          <h2>Ideas that<br/>outlive the<br/><em>scroll.</em></h2>
+          <p>Books invite the kind of sustained attention that important questions deserve.</p>
+          <a href="https://amzn.to/4bhivYq" target="_blank">Visit the bookshelf <Arrow /></a>
+        </div>
+        <div className="flag-bookstage">
+          <a className="flag-book flag-book-one" href="https://amzn.to/4bhivYq" target="_blank">
+            <img src="/ai-modern-education.jpg" alt="Artificial Intelligence: Its Role in Modern Computing and Education book cover"/>
+            <span>Artificial Intelligence in Modern Education</span>
+          </a>
+          <a className="flag-book flag-book-two" href="https://amzn.to/4eNBEnU" target="_blank">
+            <img src="/igbo-business-moguls.jpg" alt="Igbo Business Moguls book cover"/>
+            <span>Igbo Business Moguls</span>
+          </a>
+          <div className="flag-orbit-text">READ · THINK · APPLY · REPEAT ·</div>
+        </div>
+      </section>
+
+      <section className="flag-research" id="research">
+        <div className="flag-section-label"><span>03</span><p>THE QUESTION</p></div>
+        <div className="flag-research-main">
+          <p>Current research focus</p>
+          <h2>How can AI expand education without shrinking human judgment?</h2>
+          <div className="flag-research-meta">
+            <span>Artificial intelligence</span><span>Vocational education</span><span>African institutions</span>
+          </div>
+        </div>
+        <aside><span>NOW EXPLORING</span><p>The systems, incentives and cultural contexts that determine whether technology creates genuine opportunity.</p></aside>
+      </section>
+
+      <section className="flag-proof">
+        <div><strong>02</strong><span>Published books</span></div>
+        <div><strong>04</strong><span>Connected disciplines</span></div>
+        <div><strong>01</strong><span>Unifying mission</span></div>
+        <blockquote>“Grow your passion,<br/><em>regardless.</em>”</blockquote>
+      </section>
+
+      <section className="flag-contact-section" id="contact">
+        <div className="flag-contact-photo"><img src="/apex-mobile.png" alt="Uchechukwu “Apex” Ajuzieogu"/></div>
+        <div className="flag-contact-copy">
+          <p className="flag-kicker">Speaking · Research · Ventures</p>
+          <h2>Bring me a<br/>question worth<br/><em>building around.</em></h2>
+          <a href="mailto:uche@ajuzieogu.com">uche@ajuzieogu.com <Arrow /></a>
+        </div>
+      </section>
+
+      <footer className="flag-footer">
+        <div className="flag-wordmark flag-wordmark-footer"><b>A</b><span>UCHECHUKWU<br/>AJUZIEOGU</span></div>
+        <p>Technologist · Author · Researcher · Entrepreneur</p>
+        <div><a href="https://linkedin.com/in/uchechukwu-ajuzieogu" target="_blank">LinkedIn</a><a href="https://x.com/apex_zy" target="_blank">X / Twitter</a><a href="https://github.com/apexzy" target="_blank">GitHub</a></div>
+        <small>© 2026 Uchechukwu Ajuzieogu</small>
+      </footer>
+    </main>
   );
 }
 
@@ -186,10 +308,10 @@ function OS() {
   );
 }
 
-const screens = { authority: Authority, editorial: Editorial, lab: Lab, story: Story, stage: Stage, os: OS };
+const screens = { flagship: Flagship, authority: Authority, editorial: Editorial, lab: Lab, story: Story, stage: Stage, os: OS };
 
 export default function Home() {
-  const [active, setActive] = useState("authority");
+  const [active, setActive] = useState("flagship");
   const [drawer, setDrawer] = useState(false);
   const ActiveScreen = screens[active];
 
@@ -210,7 +332,7 @@ export default function Home() {
   return (
     <>
       <button className="concept-launcher" onClick={() => setDrawer(!drawer)} aria-expanded={drawer}>
-        <span>DESIGN {current.number} / 06</span>
+        <span>{active === "flagship" ? "FLAGSHIP BUILD" : `DESIGN ${current.number} / 06`}</span>
         <b>{current.label}</b>
         <i>{drawer ? "×" : "＋"}</i>
       </button>
