@@ -28,7 +28,7 @@ function Flagship() {
     <main className="concept flagship" id="top">
       <header className="flag-nav">
         <a className="flag-wordmark" href="#top"><b>A</b><span>UCHECHUKWU<br/>AJUZIEOGU</span></a>
-        <nav><a href="#practice">Practice</a><a href="#books">Books</a><a href="#research">Research</a><a href="#contact">Contact</a></nav>
+        <nav><a href="#practice">Practice</a><a href="#research">Research</a><a href="#recognition">Recognition</a><a href="#contact">Contact</a></nav>
         <a className="flag-contact" href="mailto:uche@ajuzieogu.com">Start a conversation <Arrow /></a>
       </header>
 
@@ -107,22 +107,90 @@ function Flagship() {
       </section>
 
       <section className="flag-research" id="research">
-        <div className="flag-section-label"><span>03</span><p>THE QUESTION</p></div>
-        <div className="flag-research-main">
-          <p>Current research focus</p>
-          <h2>How can AI expand education without shrinking human judgment?</h2>
-          <div className="flag-research-meta">
-            <span>Artificial intelligence</span><span>Vocational education</span><span>African institutions</span>
-          </div>
+        <div className="flag-section-label"><span>03</span><p>THE RESEARCH</p></div>
+        <div className="flag-research-heading">
+          <p className="flag-kicker">Ideas with receipts</p>
+          <h2>Research for the<br/><em>world being built.</em></h2>
+          <p>Public work spanning AI economics, African digital sovereignty, cloud infrastructure and the future of labor.</p>
         </div>
-        <aside><span>NOW EXPLORING</span><p>The systems, incentives and cultural contexts that determine whether technology creates genuine opportunity.</p></aside>
+        <a className="flag-research-profile" href="https://www.researchgate.net/profile/Uchechukwu-Ajuzieogu" target="_blank" rel="noreferrer">
+          <span>FULL PUBLIC RECORD</span><strong>ResearchGate</strong><Arrow />
+        </a>
       </section>
 
-      <section className="flag-proof">
-        <div><strong>02</strong><span>Published books</span></div>
-        <div><strong>04</strong><span>Connected disciplines</span></div>
-        <div><strong>01</strong><span>Unifying mission</span></div>
-        <blockquote>“Grow your passion,<br/><em>regardless.</em>”</blockquote>
+      <section className="flag-research-list">
+        <a href="https://www.researchgate.net/publication/403505606_Democratizing_Multi-_Cloud_Cost_Optimization_for_Small_and_Medium_Businesses" target="_blank" rel="noreferrer">
+          <span>2026 / CLOUD ECONOMICS</span><h3>Democratizing Multi-Cloud Cost Optimization for Small and Medium Businesses</h3><b><Arrow /></b>
+        </a>
+        <a href="https://www.researchgate.net/publication/400798251_From_Extraction_to_Ownership_Platform_Cooperatives_as_Infrastructure_for_Worker_Sovereignty_in_African_AI_Labor_Markets" target="_blank" rel="noreferrer">
+          <span>2026 / AI & LABOR</span><h3>From Extraction to Ownership: Platform Cooperatives in African AI Labor Markets</h3><b><Arrow /></b>
+        </a>
+        <a href="https://www.researchgate.net/publication/396230260_From_Aspiration_to_Implementation_The_African_Union_AI_Continental_Strategy_and_the_Development-Governance_Paradox" target="_blank" rel="noreferrer">
+          <span>2025 / AI POLICY</span><h3>From Aspiration to Implementation: The African Union AI Continental Strategy</h3><b><Arrow /></b>
+        </a>
+        <a href="https://www.researchgate.net/publication/392924584_Kenya%27s_Data_Workers_The_2Hour_Labor_Force_Training_Western_AI" target="_blank" rel="noreferrer">
+          <span>2025 / INVESTIGATION</span><h3>Kenya&apos;s Data Workers: The $2/Hour Labor Force Training Western AI</h3><b><Arrow /></b>
+        </a>
+      </section>
+
+      <section className="flag-proof" aria-label="Public research and audience metrics">
+        <a href="https://www.researchgate.net/profile/Uchechukwu-Ajuzieogu" target="_blank" rel="noreferrer"><strong>92</strong><span>Publications listed</span></a>
+        <a href="https://www.researchgate.net/profile/Uchechukwu-Ajuzieogu" target="_blank" rel="noreferrer"><strong>80K+</strong><span>Research reads</span></a>
+        <a href="https://www.researchgate.net/profile/Uchechukwu-Ajuzieogu" target="_blank" rel="noreferrer"><strong>123</strong><span>Research citations</span></a>
+        <a href="https://www.linkedin.com/in/uchechukwu-ajuzieogu" target="_blank" rel="noreferrer"><strong>65K+</strong><span>LinkedIn followers</span></a>
+        <p>Public figures checked July 2026. Follow the links to see the live records.</p>
+      </section>
+
+      <section className="flag-recognition" id="recognition">
+        <div className="flag-recognition-photo">
+          <img src="/apex-isi-agu.jpg" alt="Uchechukwu Ajuzieogu in traditional Igbo Isi Agu attire"/>
+          <a href="https://commons.wikimedia.org/wiki/File:Uchechukw_Ajuzieogu_(Trad)_HD.jpg" target="_blank" rel="noreferrer">Portrait: Apex Zy / CC BY-SA 4.0</a>
+        </div>
+        <div className="flag-recognition-copy">
+          <div className="flag-section-label"><span>04</span><p>RECOGNITION</p></div>
+          <p className="flag-kicker">Earned, not invented</p>
+          <h2>Signals of<br/><em>the work.</em></h2>
+          <div className="flag-awards">
+            <a href="https://www.linkedin.com/in/uchechukwu-ajuzieogu" target="_blank" rel="noreferrer"><span>2022</span><strong>McKinsey Forward Program</strong><small>McKinsey & Company</small><b><Arrow /></b></a>
+            <a href="https://ajuzieogu.com/about/" target="_blank" rel="noreferrer"><span>2019</span><strong>Best Programmer in Computer</strong><small>NACOSS</small><b><Arrow /></b></a>
+            <a href="https://www.linkedin.com/in/uchechukwu-ajuzieogu" target="_blank" rel="noreferrer"><span>2019</span><strong>Alvan Villa Achievers Award</strong><small>Recognition</small><b><Arrow /></b></a>
+            <a href="https://aylgorith.com/uchechukwu-ajuzieogu/" target="_blank" rel="noreferrer"><span>AI / ML</span><strong>AWS AI & ML Scholar</strong><small>Amazon Web Services</small><b><Arrow /></b></a>
+          </div>
+        </div>
+      </section>
+
+      <section className="flag-ventures">
+        <div className="flag-section-label flag-section-light"><span>05</span><p>LEADERSHIP & VENTURES</p></div>
+        <div className="flag-venture-grid">
+          <a href="https://africanaipolicy.org/" target="_blank" rel="noreferrer"><span>FOUNDER / EXECUTIVE DIRECTOR</span><h3>African Institute for AI Policy</h3><p>Research and policy infrastructure for Africa&apos;s AI future.</p><b>Visit <Arrow /></b></a>
+          <a href="https://aylgorith.com/uchechukwu-ajuzieogu/" target="_blank" rel="noreferrer"><span>FOUNDER / EDITOR-IN-CHIEF</span><h3>Aylgorith</h3><p>Independent research and analysis on AI, economics and society.</p><b>Visit <Arrow /></b></a>
+          <a href="https://www.crunchbase.com/organization/rova-media-digital" target="_blank" rel="noreferrer"><span>FOUNDER</span><h3>Rova Media Digital</h3><p>Technology products, platforms and digital systems.</p><b>Public record <Arrow /></b></a>
+          <a href="https://lanfarms.com/about/team/" target="_blank" rel="noreferrer"><span>CO-FOUNDER</span><h3>LANFarms</h3><p>Building employment and people-operations technology.</p><b>Meet the team <Arrow /></b></a>
+        </div>
+      </section>
+
+      <section className="flag-media">
+        <div className="flag-media-intro">
+          <div className="flag-section-label"><span>06</span><p>MEDIA & IDEAS</p></div>
+          <h2>One voice.<br/><em>Many rooms.</em></h2>
+        </div>
+        <div className="flag-media-grid">
+          <a className="flag-media-feature" href="https://podcasts.apple.com/us/podcast/one-on-one/id1518666608" target="_blank" rel="noreferrer">
+            <span>PODCAST / 8 EPISODES</span><h3>One On One</h3><p>Conversations on technology, enterprise and the people moving ideas forward.</p><b>Listen on Apple Podcasts <Arrow /></b>
+          </a>
+          <a href="https://www.tekedia.com/nigerian-entrepreneurs-startup-istanbul-2020-could-be-your-spotlight/" target="_blank" rel="noreferrer"><span>CONTRIBUTOR</span><h3>Tekedia</h3><b>Read an article <Arrow /></b></a>
+          <a href="https://medium.com/21-times-out" target="_blank" rel="noreferrer"><span>PUBLICATION</span><h3>21 Times Out!</h3><b>Open on Medium <Arrow /></b></a>
+          <a href="https://www.linkedin.com/in/uchechukwu-ajuzieogu" target="_blank" rel="noreferrer"><span>GUEST SPEAKER</span><h3>W3 Technologies</h3><b>View public profile <Arrow /></b></a>
+        </div>
+      </section>
+
+      <section className="flag-web-strip">
+        <span>PUBLIC RECORD ACROSS</span>
+        <a href="https://www.researchgate.net/profile/Uchechukwu-Ajuzieogu" target="_blank" rel="noreferrer">ResearchGate</a>
+        <a href="https://podcasts.apple.com/us/podcast/one-on-one/id1518666608" target="_blank" rel="noreferrer">Apple Podcasts</a>
+        <a href="https://www.linkedin.com/in/uchechukwu-ajuzieogu" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://www.tekedia.com/" target="_blank" rel="noreferrer">Tekedia</a>
+        <a href="https://www.crunchbase.com/organization/rova-media-digital" target="_blank" rel="noreferrer">Crunchbase</a>
       </section>
 
       <section className="flag-contact-section" id="contact">
