@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "vinext build && node scripts/prepare-sites-output.mjs",
     "build:next": "next build",
+    "build:pages": "node scripts/build-cloudflare-pages.mjs",
     "start": "next start",
     "lint": "next lint",
     "dev:vinext": "vinext dev --port 3001",
