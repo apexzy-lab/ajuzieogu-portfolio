@@ -1,5 +1,9 @@
 export const siteUrl = "https://ajuzieogu.com";
+export const siteName = "Uchechukwu Ajuzieogu";
 export const email = "uche@ajuzieogu.com";
+export const siteDescription =
+  "The official portfolio of Uchechukwu “Apex” Ajuzieogu—technologist, author, AI economics and policy researcher, educator and entrepreneur.";
+export const ogImage = `${siteUrl}/og.png`;
 
 export const navItems = [
   { href: "/about", label: "About" },
@@ -164,8 +168,14 @@ export const personSchema = {
   name: "Uchechukwu Chimaeze Ajuzieogu",
   alternateName: "Apex",
   url: siteUrl,
-  image: `${siteUrl}/apex-hero-real.jpg`,
+  description: siteDescription,
+  image: {
+    "@type": "ImageObject",
+    url: `${siteUrl}/apex-hero-real.jpg`,
+    caption: "Uchechukwu Ajuzieogu",
+  },
   jobTitle: "Technologist, Author, Researcher and Entrepreneur",
+  email,
   alumniOf: {
     "@type": "CollegeOrUniversity",
     name: "University of Nigeria, Nsukka",
@@ -180,25 +190,137 @@ export const personSchema = {
   ],
 };
 
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  url: siteUrl,
+  name: siteName,
+  alternateName: "Apex Ajuzieogu",
+  description: siteDescription,
+  inLanguage: "en-NG",
+  publisher: { "@id": `${siteUrl}/#person` },
+};
+
+const pageKeywords = {
+  "/": [
+    "Uchechukwu Ajuzieogu",
+    "Apex Ajuzieogu",
+    "African AI policy researcher",
+    "AI economics Africa",
+    "technology policy expert Nigeria",
+  ],
+  "/about": [
+    "Uchechukwu Ajuzieogu biography",
+    "Apex Ajuzieogu profile",
+    "African technologist and author",
+    "AI policy researcher biography",
+  ],
+  "/work": [
+    "Uchechukwu Ajuzieogu ventures",
+    "African Institute for AI Policy founder",
+    "Aylgorith founder",
+    "African technology entrepreneur",
+  ],
+  "/research": [
+    "African AI policy research",
+    "AI economics research Africa",
+    "AI labor markets Africa",
+    "African Union AI strategy research",
+    "technology governance Global South",
+  ],
+  "/books": [
+    "books by Uchechukwu Ajuzieogu",
+    "Artificial Intelligence in Modern Education book",
+    "Igbo Business Moguls book",
+  ],
+  "/speaking": [
+    "AI policy speaker Africa",
+    "Uchechukwu Ajuzieogu speaker",
+    "African technology keynote speaker",
+    "AI economics conference speaker",
+  ],
+  "/insights": [
+    "AI economics analysis",
+    "African technology policy insights",
+    "AI labor and infrastructure analysis",
+    "Global South AI commentary",
+  ],
+  "/contact": [
+    "contact Uchechukwu Ajuzieogu",
+    "book AI policy speaker",
+    "AI research collaboration Africa",
+  ],
+};
+
+export function breadcrumbSchema(path, label) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: label,
+        item: `${siteUrl}${path}`,
+      },
+    ],
+  };
+}
+
+export function webPageSchema({ type = "WebPage", path, name, description }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": type,
+    "@id": `${siteUrl}${path}#webpage`,
+    url: `${siteUrl}${path}`,
+    name,
+    description,
+    inLanguage: "en-NG",
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    about: { "@id": `${siteUrl}/#person` },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: ogImage,
+    },
+  };
+}
+
 export function pageMetadata(title, description, path = "") {
   const canonical = `${siteUrl}${path}`;
+  const pageTitle = path
+    ? title
+    : { absolute: "Uchechukwu Ajuzieogu | AI Policy Researcher & Author" };
   return {
-    title,
+    title: pageTitle,
     description,
-    alternates: { canonical },
+    keywords: pageKeywords[path] || pageKeywords["/"],
+    authors: [{ name: siteName, url: `${siteUrl}/about` }],
+    alternates: {
+      canonical,
+      languages: { "en-NG": canonical },
+    },
     openGraph: {
       title,
       description,
       url: canonical,
-      siteName: "Uchechukwu Ajuzieogu",
+      siteName,
+      locale: "en_NG",
       type: "website",
-      images: [{ url: "/apex-hero-real.jpg", width: 1200, height: 630 }],
+      images: [{ url: ogImage, width: 1730, height: 909, alt: `${siteName} — ${title}` }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/apex-hero-real.jpg"],
+      creator: "@apex_zy",
+      images: [ogImage],
     },
   };
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { email, navItems, socialLinks } from "./site-data";
+import { breadcrumbSchema, email, navItems, socialLinks } from "./site-data";
 
 export function Arrow() {
   return <span aria-hidden="true">↗</span>;
@@ -51,11 +51,25 @@ export function Footer() {
   );
 }
 
-export function PageHero({ index, eyebrow, title, italic, intro, children }) {
+export function Breadcrumbs({ current, path, light = false }) {
+  return (
+    <>
+      <nav className={`breadcrumbs ${light ? "breadcrumbs-light" : ""}`} aria-label="Breadcrumb">
+        <Link href="/">Home</Link>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{current}</span>
+      </nav>
+      <JsonLd data={breadcrumbSchema(path, current)} />
+    </>
+  );
+}
+
+export function PageHero({ index, eyebrow, title, italic, intro, breadcrumb, path, children }) {
   return (
     <section className="page-hero">
       <div className="page-index">{index}</div>
       <div className="page-hero-copy">
+        {breadcrumb && path && <Breadcrumbs current={breadcrumb} path={path} />}
         <p className="eyebrow">{eyebrow}</p>
         <h1>{title}<br /><em>{italic}</em></h1>
         <p className="page-intro">{intro}</p>

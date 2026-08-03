@@ -1,5 +1,5 @@
-import { Arrow, ContactBand, PageHero, SectionHeading } from "../components";
-import { pageMetadata } from "../site-data";
+import { Arrow, ContactBand, JsonLd, PageHero, SectionHeading } from "../components";
+import { pageMetadata, siteUrl, webPageSchema } from "../site-data";
 
 export const metadata = pageMetadata(
   "Speaking & Media",
@@ -8,10 +8,28 @@ export const metadata = pageMetadata(
 );
 
 export default function SpeakingPage() {
+  const schema = {
+    ...webPageSchema({
+      path: "/speaking",
+      name: "Speaking and media — Uchechukwu Ajuzieogu",
+      description: metadata.description,
+    }),
+    mainEntity: {
+      "@type": "Service",
+      name: "Speaking and media engagements",
+      provider: { "@id": `${siteUrl}/#person` },
+      areaServed: "Worldwide",
+      serviceType: ["Keynote speaking", "Panel discussions", "Media interviews", "Executive briefings"],
+    },
+  };
+
   return (
     <main>
+      <JsonLd data={schema} />
       <PageHero
         index="05"
+        breadcrumb="Speaking"
+        path="/speaking"
         eyebrow="Speaking & media"
         title="One voice."
         italic="Many rooms."

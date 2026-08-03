@@ -1,5 +1,5 @@
 import { Arrow, ContactBand, JsonLd, PageHero, SectionHeading } from "../components";
-import { pageMetadata, research, siteUrl } from "../site-data";
+import { pageMetadata, research, siteUrl, webPageSchema } from "../site-data";
 
 export const metadata = pageMetadata(
   "Research",
@@ -9,10 +9,13 @@ export const metadata = pageMetadata(
 
 export default function ResearchPage() {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
+    ...webPageSchema({
+      type: "CollectionPage",
+      path: "/research",
+      name: "Research by Uchechukwu Ajuzieogu",
+      description: metadata.description,
+    }),
     name: "Research by Uchechukwu Ajuzieogu",
-    url: `${siteUrl}/research`,
     author: { "@id": `${siteUrl}/#person` },
     hasPart: research.map((item) => ({
       "@type": "ScholarlyArticle",
@@ -28,6 +31,8 @@ export default function ResearchPage() {
       <JsonLd data={schema} />
       <PageHero
         index="03"
+        breadcrumb="Research"
+        path="/research"
         eyebrow="Research"
         title="Study the systems"
         italic="beneath the story."

@@ -3,6 +3,8 @@ dist/
 node_modules/
 out/
 qa/
+.wrangler/
+next-env.d.ts
 work/
 outputs/
 *.log

@@ -107,6 +107,20 @@ button, input, textarea { font: inherit; }
   font: 700 11px var(--mono);
   text-transform: uppercase;
 }
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 30px;
+  color: var(--muted);
+  font: 700 9px/1.3 var(--mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.breadcrumbs a { color: var(--blue); }
+.breadcrumbs a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.breadcrumbs-light { color: rgba(255,255,255,.65); }
+.breadcrumbs-light a { color: var(--acid); }
 .section-link { margin-top: 50px; }
 .light-link { color: var(--white); }
 

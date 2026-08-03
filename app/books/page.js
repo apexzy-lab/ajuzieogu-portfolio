@@ -1,5 +1,5 @@
 import { Arrow, ContactBand, JsonLd, PageHero } from "../components";
-import { books, pageMetadata, siteUrl } from "../site-data";
+import { books, pageMetadata, siteUrl, webPageSchema } from "../site-data";
 
 export const metadata = pageMetadata(
   "Books",
@@ -9,10 +9,16 @@ export const metadata = pageMetadata(
 
 export default function BooksPage() {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Books by Uchechukwu Ajuzieogu",
-    itemListElement: books.map((book, index) => ({
+    ...webPageSchema({
+      type: "CollectionPage",
+      path: "/books",
+      name: "Books by Uchechukwu Ajuzieogu",
+      description: metadata.description,
+    }),
+    mainEntity: {
+      "@type": "ItemList",
+      name: "Books by Uchechukwu Ajuzieogu",
+      itemListElement: books.map((book, index) => ({
       "@type": "ListItem",
       position: index + 1,
       item: {
@@ -23,7 +29,8 @@ export default function BooksPage() {
         url: book.href,
         author: { "@id": `${siteUrl}/#person` },
       },
-    })),
+      })),
+    },
   };
 
   return (
@@ -31,6 +38,8 @@ export default function BooksPage() {
       <JsonLd data={schema} />
       <PageHero
         index="04"
+        breadcrumb="Books"
+        path="/books"
         eyebrow="Books"
         title="Ideas that deserve"
         italic="more than a scroll."

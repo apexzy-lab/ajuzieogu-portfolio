@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Arrow, JsonLd, SectionHeading } from "./components";
-import { books, pageMetadata, research, siteUrl, ventures } from "./site-data";
+import { books, pageMetadata, research, ventures, webPageSchema } from "./site-data";
 
 export const metadata = pageMetadata(
   "Technologist, Author & AI Policy Researcher",
@@ -8,19 +8,15 @@ export const metadata = pageMetadata(
 );
 
 export default function HomePage() {
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${siteUrl}/#website`,
-    url: siteUrl,
-    name: "Uchechukwu Ajuzieogu",
+  const homeSchema = webPageSchema({
+    path: "",
+    name: "Uchechukwu Ajuzieogu — Technologist, Author and AI Policy Researcher",
     description: metadata.description,
-    publisher: { "@id": `${siteUrl}/#person` },
-  };
+  });
 
   return (
     <main>
-      <JsonLd data={websiteSchema} />
+      <JsonLd data={homeSchema} />
       <section className="home-hero">
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">

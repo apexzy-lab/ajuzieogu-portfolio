@@ -1,5 +1,5 @@
-import { Arrow, ContactBand, PageHero, SectionHeading } from "../components";
-import { insightLinks, pageMetadata } from "../site-data";
+import { Arrow, ContactBand, JsonLd, PageHero, SectionHeading } from "../components";
+import { insightLinks, pageMetadata, siteUrl, webPageSchema } from "../site-data";
 
 export const metadata = pageMetadata(
   "Insights",
@@ -8,10 +8,37 @@ export const metadata = pageMetadata(
 );
 
 export default function InsightsPage() {
+  const schema = {
+    ...webPageSchema({
+      type: "CollectionPage",
+      path: "/insights",
+      name: "Insights by Uchechukwu Ajuzieogu",
+      description: metadata.description,
+    }),
+    author: { "@id": `${siteUrl}/#person` },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: insightLinks.map((insight, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Article",
+          headline: insight.title,
+          description: insight.description,
+          url: insight.href,
+          author: { "@id": `${siteUrl}/#person` },
+        },
+      })),
+    },
+  };
+
   return (
     <main>
+      <JsonLd data={schema} />
       <PageHero
         index="06"
+        breadcrumb="Insights"
+        path="/insights"
         eyebrow="Insights"
         title="Follow the idea"
         italic="past the headline."

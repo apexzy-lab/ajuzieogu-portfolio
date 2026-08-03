@@ -1,5 +1,5 @@
-import { Arrow, JsonLd } from "../components";
-import { email, pageMetadata, siteUrl, socialLinks } from "../site-data";
+import { Arrow, Breadcrumbs, JsonLd } from "../components";
+import { email, pageMetadata, siteUrl, socialLinks, webPageSchema } from "../site-data";
 
 export const metadata = pageMetadata(
   "Contact",
@@ -9,10 +9,12 @@ export const metadata = pageMetadata(
 
 export default function ContactPage() {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    url: `${siteUrl}/contact`,
-    name: "Contact Uchechukwu Ajuzieogu",
+    ...webPageSchema({
+      type: "ContactPage",
+      path: "/contact",
+      name: "Contact Uchechukwu Ajuzieogu",
+      description: metadata.description,
+    }),
     mainEntity: { "@id": `${siteUrl}/#person` },
   };
 
@@ -22,6 +24,7 @@ export default function ContactPage() {
     <main className="contact-page">
       <JsonLd data={schema} />
       <section className="contact-hero">
+        <Breadcrumbs current="Contact" path="/contact" light />
         <p className="eyebrow light">Contact / 07</p>
         <h1>Bring a question<br />worth <em>building around.</em></h1>
         <a className="contact-email" href={`mailto:${email}?subject=${subject}`}>{email} <Arrow /></a>

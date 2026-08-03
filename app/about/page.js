@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Arrow, ContactBand, PageHero, SectionHeading } from "../components";
-import { expertise, memberships, pageMetadata } from "../site-data";
+import { Arrow, ContactBand, JsonLd, PageHero, SectionHeading } from "../components";
+import { expertise, memberships, pageMetadata, siteUrl, webPageSchema } from "../site-data";
 
 export const metadata = pageMetadata(
   "About",
@@ -9,10 +9,24 @@ export const metadata = pageMetadata(
 );
 
 export default function AboutPage() {
+  const schema = {
+    ...webPageSchema({
+      type: "ProfilePage",
+      path: "/about",
+      name: "About Uchechukwu Ajuzieogu",
+      description: metadata.description,
+    }),
+    dateModified: "2026-08-03",
+    mainEntity: { "@id": `${siteUrl}/#person` },
+  };
+
   return (
     <main>
+      <JsonLd data={schema} />
       <PageHero
         index="01"
+        breadcrumb="About"
+        path="/about"
         eyebrow="About Uchechukwu"
         title="A builder across"
         italic="disciplines."
