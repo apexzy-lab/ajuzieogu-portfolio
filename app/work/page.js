@@ -62,9 +62,9 @@ export default function WorkPage() {
       <section className="venture-archive">
         <SectionHeading
           index="03"
-          eyebrow="Venture archive"
-          title="The earlier builds still count."
-          intro="Flagships show current focus. This ledger preserves the broader founder and operator history—including exits, experiments and the ventures that made the next ones possible."
+          eyebrow="Founder history"
+          title="Venture portfolio."
+          intro="Companies and products founded, co-founded or led across technology, research, mobility, commerce and education."
         />
         <div className="archive-list">
           {ventureArchive.map((item, index) => (
