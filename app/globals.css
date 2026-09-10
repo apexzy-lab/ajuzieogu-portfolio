@@ -501,6 +501,15 @@ button, input, textarea { font: inherit; }
 .venture-card.ink p { color: #aaa; }
 .venture-card.copper { background: var(--copper); color: #fff; }
 .venture-card.copper p { color: #f8d2c8; }
+.venture-archive { padding: 120px 6vw; background: #d9d6cd; }
+.archive-list { margin: 85px 0 0 140px; border-top: 1px solid var(--line); }
+.archive-list article { display: grid; grid-template-columns: 48px 125px minmax(240px, 1fr) minmax(190px, .7fr); gap: 24px; align-items: center; padding: 25px 0; border-bottom: 1px solid var(--line); }
+.archive-list article > span { color: var(--blue); font: 700 9px var(--mono); }
+.archive-list time { color: var(--muted); font: 700 9px var(--mono); text-transform: uppercase; }
+.archive-list h3 { margin: 0 0 5px; font-size: 25px; letter-spacing: -.025em; }
+.archive-list article p { margin: 0; color: var(--muted); line-height: 1.45; }
+.archive-list div p { font-size: 13px; }
+.archive-note { max-width: 680px; margin: 30px 0 0 313px; color: var(--muted); font: 10px/1.6 var(--mono); }
 .capabilities { padding: 120px 6vw; }
 .capability-list { margin: 90px 0 0 140px; border-top: 1px solid var(--line); }
 .capability-list article { display: grid; grid-template-columns: 80px 1fr 1fr; gap: 30px; padding: 35px 0; border-bottom: 1px solid var(--line); }
@@ -704,6 +713,10 @@ button, input, textarea { font: inherit; }
   .library-book:nth-child(even) .library-cover { order: 0; }
   .library-cover { min-height: 650px; }
   .capability-list, .topic-list, .timeline, .tag-cloud { margin-left: 100px; }
+  .archive-list { margin-left: 100px; }
+  .archive-list article { grid-template-columns: 40px 105px 1fr; }
+  .archive-list article > p:last-child { grid-column: 3; }
+  .archive-note { margin-left: 245px; }
   .capability-list article { grid-template-columns: 60px 1fr; }
   .capability-list p { grid-column: 2; }
   .recognition-strip { grid-template-columns: repeat(2, 1fr); }
@@ -737,7 +750,7 @@ button, input, textarea { font: inherit; }
   .hero-actions { flex-wrap: wrap; }
   .hero-portrait { min-height: 600px; }
   .hero-stamp { width: 165px; height: 155px; }
-  .home-manifesto, .home-work, .home-research, .principles-section, .expertise-section, .journey-section, .capabilities, .service-section, .research-focus, .publication-section, .topic-section, .insight-list-section { padding: 85px 22px; }
+  .home-manifesto, .home-work, .home-research, .principles-section, .expertise-section, .journey-section, .venture-archive, .capabilities, .service-section, .research-focus, .publication-section, .topic-section, .insight-list-section { padding: 85px 22px; }
   .section-heading { grid-template-columns: 1fr; gap: 28px; }
   .section-heading h2 { font-size: 50px; }
   .manifesto-copy { margin: 75px 0 0; }
@@ -767,6 +780,12 @@ button, input, textarea { font: inherit; }
   .principle-grid article { min-height: 270px; padding: 28px; }
   .principle-grid h3 { margin-top: 65px; }
   .capability-list, .topic-list, .timeline, .tag-cloud { margin-left: 0; }
+  .archive-list { margin-left: 0; }
+  .archive-list article { grid-template-columns: 32px 1fr; gap: 12px; align-items: start; }
+  .archive-list time { grid-column: 2; }
+  .archive-list article > div { grid-column: 2; }
+  .archive-list article > p:last-child { grid-column: 2; }
+  .archive-note { margin-left: 44px; }
   .timeline article { grid-template-columns: 1fr; gap: 18px; }
   .membership-section { padding: 80px 22px; }
   .venture-card { min-height: 450px; padding: 30px 22px; }

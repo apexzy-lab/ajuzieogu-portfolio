@@ -1,5 +1,5 @@
 import { Arrow, ContactBand, JsonLd, PageHero, SectionHeading } from "../components";
-import { pageMetadata, ventures, webPageSchema } from "../site-data";
+import { pageMetadata, ventureArchive, ventures, webPageSchema } from "../site-data";
 
 export const metadata = pageMetadata(
   "Work & Ventures",
@@ -17,14 +17,14 @@ export default function WorkPage() {
     }),
     mainEntity: {
       "@type": "ItemList",
-      itemListElement: ventures.map((venture, index) => ({
+      itemListElement: [...ventures, ...ventureArchive].map((venture, index) => ({
         "@type": "ListItem",
         position: index + 1,
         item: {
           "@type": venture.schemaType || "Organization",
           name: venture.title,
-          description: venture.description,
-          url: venture.href,
+          description: venture.description || `${venture.role} — ${venture.field}`,
+          ...(venture.href && { url: venture.href }),
           ...(venture.schemaType === "SoftwareApplication" && {
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web",
@@ -59,8 +59,28 @@ export default function WorkPage() {
         ))}
       </section>
 
+      <section className="venture-archive">
+        <SectionHeading
+          index="03"
+          eyebrow="Venture archive"
+          title="The earlier builds still count."
+          intro="Flagships show current focus. This ledger preserves the broader founder and operator history—including exits, experiments and the ventures that made the next ones possible."
+        />
+        <div className="archive-list">
+          {ventureArchive.map((item, index) => (
+            <article key={item.title}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <time>{item.years}</time>
+              <div><h3>{item.title}</h3><p>{item.role}</p></div>
+              <p>{item.field}</p>
+            </article>
+          ))}
+        </div>
+        <p className="archive-note">Selected founder and operating history. Dates and status reflect Uchechukwu’s professional record as supplied in September 2026.</p>
+      </section>
+
       <section className="capabilities">
-        <SectionHeading index="03" eyebrow="Capabilities" title="Where strategy meets execution." />
+        <SectionHeading index="04" eyebrow="Capabilities" title="Where strategy meets execution." />
         <div className="capability-list">
           <article><span>01</span><h3>AI policy & research strategy</h3><p>Research agendas, policy analysis, evidence synthesis and stakeholder framing for complex technology questions.</p></article>
           <article><span>02</span><h3>Digital transformation</h3><p>Translating organizational needs into practical product, cloud, data and operating decisions.</p></article>
@@ -70,7 +90,7 @@ export default function WorkPage() {
       </section>
 
       <section className="service-section">
-        <SectionHeading index="04" eyebrow="Service & contribution" title="Knowledge should circulate." light />
+        <SectionHeading index="05" eyebrow="Service & contribution" title="Knowledge should circulate." light />
         <div className="service-grid">
           <article><h3>Nigerian Economic Summit Group</h3><p>Technical consulting and contribution to socio-economic strategy in the technology sector.</p></article>
           <article><h3>Teaching & mentoring</h3><p>Computer science instruction, curriculum development, developer mentorship and business mentoring.</p></article>

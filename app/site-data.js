@@ -54,7 +54,7 @@ export const ventures = [
     schemaType: "SoftwareApplication",
   },
   {
-    type: "Travel technology",
+    type: "Newest launch · Travel technology",
     title: "Wayprint",
     role: "Founder",
     description:
@@ -83,6 +83,27 @@ export const ventures = [
     tone: "electric",
     schemaType: "Organization",
   },
+];
+
+export const ventureArchive = [
+  { years: "2025—Now", title: "Rhys", role: "Principal Economist & Policy Advisor", field: "Economic research & policy advisory" },
+  { years: "2024—Now", title: "Prodilot", role: "Founder & Editor-in-Chief", field: "Product & project intelligence" },
+  { years: "2024—Now", title: "Tourvana", role: "Co-Founder & CTO", field: "Travel technology" },
+  { years: "2025—2026", title: "Bourxx", role: "Co-Founder & CTO · Exited", field: "Trusted gadget commerce" },
+  { years: "2017—2026", title: "Careebance", role: "Founder & CEO", field: "Career services & talent marketplace" },
+  { years: "2021—2024", title: "Justwomanly", role: "Co-Founder, CTO & Product Manager · Exited", field: "Afro-fashion commerce" },
+  { years: "2021—2024", title: "Ryravel", role: "Co-Founder, CTO & Head of Product · Exited", field: "Travel technology" },
+  { years: "2020—2024", title: "LANFarms", role: "Founder & CEO · Exited", field: "Agro-commerce" },
+  { years: "2020—2024", title: "Stockipedia", role: "Founder & CEO", field: "Financial research" },
+  { years: "2018—2024", title: "Incubexus", role: "Founder & CEO", field: "Startup incubation" },
+  { years: "2018—2024", title: "Academium", role: "Founder & CEO", field: "Education technology" },
+  { years: "2015—2024", title: "Rova Media Digital", role: "Founder", field: "Technology & digital products" },
+  { years: "2014—2024", title: "UCA Consults", role: "Founder & CEO", field: "Technology & business consulting" },
+  { years: "2023—2024", title: "Zylaa", role: "Founder & Operator / CEO", field: "Health technology" },
+  { years: "2021—2024", title: "Stacrent", role: "Founder & CEO", field: "Property marketplace" },
+  { years: "2018—2023", title: "Ehubber", role: "Founder & CEO", field: "Coworking discovery" },
+  { years: "2020—2023", title: "Foodhive", role: "Founder & CEO", field: "Food-service marketplace" },
+  { years: "2015—2018", title: "Aperstech", role: "Founder · Exited", field: "Digital services" },
 ];
 
 export const research = [
