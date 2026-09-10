@@ -194,9 +194,9 @@ export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${siteUrl}/#website`,
-  url: siteUrl,
+  url: `${siteUrl}/`,
   name: siteName,
-  alternateName: "Apex Ajuzieogu",
+  alternateName: ["Uchechukwu “Apex” Ajuzieogu", "Apex Ajuzieogu"],
   description: siteDescription,
   inLanguage: "en-NG",
   publisher: { "@id": `${siteUrl}/#person` },
@@ -274,7 +274,7 @@ export function breadcrumbSchema(path, label) {
   };
 }
 
-export function webPageSchema({ type = "WebPage", path, name, description }) {
+export function webPageSchema({ type = "WebPage", path, name, description, mainEntity }) {
   return {
     "@context": "https://schema.org",
     "@type": type,
@@ -285,6 +285,7 @@ export function webPageSchema({ type = "WebPage", path, name, description }) {
     inLanguage: "en-NG",
     isPartOf: { "@id": `${siteUrl}/#website` },
     about: { "@id": `${siteUrl}/#person` },
+    ...(mainEntity && { mainEntity }),
     primaryImageOfPage: {
       "@type": "ImageObject",
       url: ogImage,

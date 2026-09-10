@@ -16,7 +16,7 @@ export default function sitemap() {
 
   return routes.map((route) => ({
     url: `${siteUrl}${route.path}`,
-    lastModified: new Date("2026-08-03"),
+    lastModified: new Date("2026-09-10"),
     changeFrequency: route.changeFrequency,
     priority: route.priority,
     alternates: { languages: { "en-NG": `${siteUrl}${route.path}` } },

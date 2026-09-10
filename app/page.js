@@ -9,9 +9,11 @@ export const metadata = pageMetadata(
 
 export default function HomePage() {
   const homeSchema = webPageSchema({
+    type: "ProfilePage",
     path: "",
     name: "Uchechukwu Ajuzieogu — Technologist, Author and AI Policy Researcher",
     description: metadata.description,
+    mainEntity: { "@id": "https://ajuzieogu.com/#person" },
   });
 
   return (
@@ -20,7 +22,7 @@ export default function HomePage() {
       <section className="home-hero">
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="status"><i /> Independent researcher · Africa / Global</p>
+          <p className="status"><i /> Uchechukwu Ajuzieogu · Independent researcher · Africa / Global</p>
           <h1><span>I turn complex</span><br />ideas into<br /><em>useful things.</em></h1>
           <div className="hero-intro">
             <p>
