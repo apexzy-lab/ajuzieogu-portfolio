@@ -5,7 +5,7 @@ out/
 qa/
 .wrangler/
 next-env.d.ts
-work/
-outputs/
+/work/
+/outputs/
 *.log
 .DS_Store
