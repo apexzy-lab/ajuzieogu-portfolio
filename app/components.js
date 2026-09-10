@@ -17,8 +17,8 @@ export function Header() {
           <Link key={item.href} href={item.href}>{item.label}</Link>
         ))}
       </nav>
-      <Link className="header-cta" href="/contact">
-        Start a conversation <Arrow />
+      <Link className="header-cta" href="/hire">
+        Work with me <Arrow />
       </Link>
     </header>
   );
@@ -28,8 +28,8 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-lead">
-        <p className="eyebrow light">Speaking · Research · Ventures</p>
-        <h2>Bring me a question<br />worth building around.</h2>
+        <p className="eyebrow light">Roles · Advisory · Speaking · Media</p>
+        <h2>Need research depth<br />and builder instinct?</h2>
         <a className="footer-email" href={`mailto:${email}`}>{email} <Arrow /></a>
       </div>
       <div className="footer-bottom">
@@ -106,7 +106,7 @@ export function ContactBand({ title = "Let’s make the next conversation useful
     <section className="contact-band">
       <p className="eyebrow light">Available for selected engagements</p>
       <h2>{title}</h2>
-      <Link href="/contact">Start a conversation <Arrow /></Link>
+      <Link href="/hire">Explore ways to work together <Arrow /></Link>
     </section>
   );
 }

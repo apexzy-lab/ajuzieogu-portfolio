@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Arrow, JsonLd, SectionHeading } from "./components";
-import { books, pageMetadata, research, ventures, webPageSchema } from "./site-data";
+import { books, mediaInterviews, pageMetadata, research, ventures, webPageSchema } from "./site-data";
 
 export const metadata = pageMetadata(
   "Technologist, Author & AI Policy Researcher",
@@ -22,14 +22,17 @@ export default function HomePage() {
       <section className="home-hero">
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="status"><i /> Uchechukwu Ajuzieogu · Independent researcher · Africa / Global</p>
+          <p className="status"><i /> Open to senior roles · Advisory · Speaking · Africa / Global</p>
           <h1><span>I turn complex</span><br />ideas into<br /><em>useful things.</em></h1>
           <div className="hero-intro">
             <p>
               Uchechukwu “Apex” Ajuzieogu is a technologist, author, researcher
               and entrepreneur working across AI, education, policy and enterprise.
             </p>
-            <Link href="/about">Meet Uchechukwu <Arrow /></Link>
+            <div className="hero-actions">
+              <Link href="/hire">Work with me <Arrow /></Link>
+              <Link href="/about">View profile <Arrow /></Link>
+            </div>
           </div>
         </div>
         <div className="hero-portrait">
@@ -115,6 +118,29 @@ export default function HomePage() {
           ))}
         </div>
         <Link className="section-link" href="/research">View research profile <Arrow /></Link>
+      </section>
+
+      <section className="home-media">
+        <SectionHeading
+          index="04"
+          eyebrow="On air"
+          title="Trusted with the hard questions."
+          intro="Media conversations on cyber-enabled fraud, corruption perception, evidence and the stories data can correct."
+          light
+        />
+        <div className="home-media-grid">
+          {mediaInterviews.map((video) => (
+            <a key={video.id} href={video.url} target="_blank" rel="noreferrer">
+              <div className="media-thumb">
+                <img src={video.thumbnail} alt={`${video.outlet} interview with Uchechukwu Ajuzieogu`} />
+                <span aria-hidden="true">▶</span>
+              </div>
+              <p>{video.outlet} / {video.date.slice(0, 4)}</p>
+              <h3>{video.title}</h3>
+            </a>
+          ))}
+        </div>
+        <Link className="section-link light-link" href="/media">View media room <Arrow /></Link>
       </section>
 
       <section className="home-books">

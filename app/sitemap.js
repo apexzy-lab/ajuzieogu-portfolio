@@ -10,6 +10,8 @@ export default function sitemap() {
     { path: "/research", priority: 0.9, changeFrequency: "monthly" },
     { path: "/books", priority: 0.8, changeFrequency: "monthly", images: ["/ai-modern-education.jpg", "/igbo-business-moguls.jpg"] },
     { path: "/speaking", priority: 0.8, changeFrequency: "monthly", images: ["/apex-mobile.png"] },
+    { path: "/media", priority: 0.9, changeFrequency: "monthly" },
+    { path: "/hire", priority: 0.9, changeFrequency: "monthly" },
     { path: "/insights", priority: 0.8, changeFrequency: "weekly" },
     { path: "/contact", priority: 0.7, changeFrequency: "yearly" },
   ];

@@ -10,7 +10,7 @@ export const navItems = [
   { href: "/work", label: "Work" },
   { href: "/research", label: "Research" },
   { href: "/books", label: "Books" },
-  { href: "/speaking", label: "Speaking" },
+  { href: "/media", label: "Media" },
   { href: "/insights", label: "Insights" },
 ];
 
@@ -152,6 +152,42 @@ export const expertise = [
   "Innovation strategy",
 ];
 
+export const mediaInterviews = [
+  {
+    id: "LQ2GpeFgjGg",
+    outlet: "BusinessDay Television",
+    date: "2025-07-29",
+    duration: "PT17M48S",
+    title: "Is Nigeria's Corruption Index Perception or Reality?",
+    description:
+      "Uchechukwu Ajuzieogu joins BusinessDay Television to examine how global corruption perceptions compare with Nigeria's documented fraud and cyber-risk reality.",
+    url: "https://www.youtube.com/watch?v=LQ2GpeFgjGg",
+    thumbnail: "https://i.ytimg.com/vi/LQ2GpeFgjGg/hqdefault.jpg",
+  },
+  {
+    id: "1uaaERGbdHo",
+    outlet: "News Central TV",
+    date: "2025-07-24",
+    duration: "PT3M4S",
+    title: "Nigeria's Fraud Reality: New Report Challenges Global Corruption Perceptions",
+    description:
+      "A News Central TV interview with Uchechukwu Ajuzieogu on using data to challenge simplistic narratives about Nigeria, fraud and corruption.",
+    url: "https://www.youtube.com/watch?v=1uaaERGbdHo",
+    thumbnail: "https://i.ytimg.com/vi/1uaaERGbdHo/hqdefault.jpg",
+  },
+  {
+    id: "KUDYWdh5D5I",
+    outlet: "Channels Television",
+    date: "2025-08-05",
+    duration: "PT9M43S",
+    title: "Nigeria's Fraud Reality: Dismantling Global Stereotypes Through Data",
+    description:
+      "Uchechukwu Ajuzieogu speaks with Channels Television about cyber-enabled fraud, evidence and the need to replace global stereotypes with a clearer reading of the data.",
+    url: "https://www.youtube.com/watch?v=KUDYWdh5D5I",
+    thumbnail: "https://i.ytimg.com/vi/KUDYWdh5D5I/hqdefault.jpg",
+  },
+];
+
 export const memberships = [
   "IEEE Computer Society",
   "Association for Computing Machinery",
@@ -239,6 +275,20 @@ const pageKeywords = {
     "Uchechukwu Ajuzieogu speaker",
     "African technology keynote speaker",
     "AI economics conference speaker",
+  ],
+  "/media": [
+    "Uchechukwu Ajuzieogu media interviews",
+    "Nigeria cyber safety expert interview",
+    "Nigeria fraud and corruption data analyst",
+    "African technology policy commentator",
+    "book Uchechukwu Ajuzieogu interview",
+  ],
+  "/hire": [
+    "hire Uchechukwu Ajuzieogu",
+    "AI policy consultant Africa",
+    "technology strategy consultant Nigeria",
+    "African AI researcher for hire",
+    "AI policy jobs and advisory",
   ],
   "/insights": [
     "AI economics analysis",
