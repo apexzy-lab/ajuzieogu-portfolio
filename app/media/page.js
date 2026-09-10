@@ -1,5 +1,5 @@
 import { Arrow, ContactBand, JsonLd, PageHero, SectionHeading } from "../components";
-import { mediaInterviews, pageMetadata, siteUrl, webPageSchema } from "../site-data";
+import { mediaInterviews, pageMetadata, pressFeatures, siteUrl, webPageSchema } from "../site-data";
 
 export const metadata = pageMetadata(
   "Media Interviews & Commentary",
@@ -39,10 +39,19 @@ export default function MediaPage() {
       })),
     },
   };
+  const articleSchemas = pressFeatures.map((article) => ({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    datePublished: article.date,
+    url: article.href,
+    about: { "@id": `${siteUrl}/#person` },
+    publisher: { "@type": "Organization", name: article.outlet },
+  }));
 
   return (
     <main>
-      <JsonLd data={[schema, ...videos]} />
+      <JsonLd data={[schema, ...videos, ...articleSchemas]} />
       <PageHero
         index="05"
         breadcrumb="Media"
@@ -88,8 +97,29 @@ export default function MediaPage() {
         ))}
       </section>
 
+      <section className="press-section">
+        <SectionHeading
+          index="06"
+          eyebrow="Selected press"
+          title="The story, reported elsewhere."
+          intro="Independent profiles and reporting on the research, ventures and experiences behind the work."
+          light
+        />
+        <div className="press-grid">
+          {pressFeatures.map((article, index) => (
+            <a href={article.href} target="_blank" rel="noreferrer" key={`${article.outlet}-${article.date}`}>
+              <div><span>{String(index + 1).padStart(2, "0")}</span><span>{article.date}</span></div>
+              <p>{article.type} / {article.outlet}</p>
+              <h3>{article.title}</h3>
+              <p>{article.description}</p>
+              <b>Read the feature <Arrow /></b>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section className="commentary-topics">
-        <SectionHeading index="06" eyebrow="Editorial fit" title="Call for clarity, not noise." />
+        <SectionHeading index="07" eyebrow="Editorial fit" title="Call for clarity, not noise." />
         <div>
           <article><span>01</span><h3>Cyber safety & digital fraud</h3><p>Human-centered explanations of online risk, public trust, prevention and the policy environment around cyber-enabled crime.</p></article>
           <article><span>02</span><h3>AI policy & economics</h3><p>Evidence-led analysis of AI markets, labor, infrastructure, governance and Africa’s negotiating position.</p></article>

@@ -353,7 +353,8 @@ button, input, textarea { font: inherit; }
 .book-object img { width: 100%; box-shadow: 0 28px 55px rgba(0,0,0,.35); }
 .book-object span { display: block; margin-top: 15px; font: 700 9px var(--mono); text-transform: uppercase; }
 .book-1 { left: 12%; top: 14%; transform: rotate(-7deg); }
-.book-2 { right: 12%; bottom: 10%; width: 205px; transform: rotate(8deg); }
+.book-2 { right: 9%; bottom: 8%; width: 185px; transform: rotate(8deg); }
+.book-3 { left: 40%; top: 34%; width: 175px; transform: rotate(2deg); }
 .proof-bar { display: grid; grid-template-columns: repeat(4, 1fr); padding: 55px 5vw; background: var(--acid); }
 .proof-bar a { display: flex; flex-direction: column; border-right: 1px solid rgba(0,0,0,.2); padding-left: 24px; }
 .proof-bar strong { font-size: 40px; letter-spacing: -.04em; }
@@ -391,6 +392,15 @@ button, input, textarea { font: inherit; }
 .commentary-topics article span { color: var(--blue); font: 700 10px var(--mono); }
 .commentary-topics article h3 { margin: 90px 0 18px; font-size: 30px; line-height: 1; letter-spacing: -.035em; }
 .commentary-topics article p { margin: 0; color: var(--muted); line-height: 1.65; }
+.press-section { padding: 120px 6vw; background: var(--blue-deep); color: #fff; }
+.press-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin: 85px 0 0 140px; background: rgba(255,255,255,.22); }
+.press-grid > a { display: flex; flex-direction: column; min-height: 430px; padding: 34px; background: var(--blue-deep); transition: background .25s ease; }
+.press-grid > a:hover { background: var(--blue); }
+.press-grid > a > div { display: flex; justify-content: space-between; color: #b8c2f5; font: 700 9px var(--mono); text-transform: uppercase; }
+.press-grid > a > p:first-of-type { margin: auto 0 16px; color: var(--acid); font: 700 9px var(--mono); text-transform: uppercase; }
+.press-grid h3 { margin: 0 0 18px; max-width: 560px; font-size: clamp(31px, 3.5vw, 52px); line-height: .95; letter-spacing: -.045em; }
+.press-grid > a > p:last-of-type { max-width: 560px; margin: 0; color: #bac2e7; line-height: 1.65; }
+.press-grid b { margin-top: 28px; font: 700 9px var(--mono); text-transform: uppercase; }
 
 .fit-statement { display: grid; grid-template-columns: 1fr 1fr; gap: 9vw; padding: 110px 8vw; background: var(--blue); color: #fff; }
 .fit-statement h2 { margin: 25px 0 0; font-size: clamp(52px, 6vw, 90px); line-height: .88; letter-spacing: -.06em; }
@@ -543,6 +553,8 @@ button, input, textarea { font: inherit; }
 .library-cover img { position: relative; z-index: 1; width: min(45%, 270px); box-shadow: 0 35px 65px rgba(0,0,0,.35); transform: rotate(-5deg); }
 .library-green .library-cover { background: #173d2b; }
 .library-green .library-cover img { transform: rotate(5deg); }
+.library-yellow .library-cover { background: #d9a52a; }
+.library-yellow .library-cover img { transform: rotate(-2deg); }
 .library-copy { display: flex; flex-direction: column; justify-content: center; padding: 80px 7vw; }
 .library-copy h2 { margin: 25px 0; font-size: clamp(48px, 5.4vw, 82px); line-height: .9; letter-spacing: -.06em; }
 .library-copy > p:not(.eyebrow) { max-width: 520px; color: var(--muted); line-height: 1.7; }
@@ -712,6 +724,7 @@ button, input, textarea { font: inherit; }
   .interview-card:nth-child(even) .video-frame { order: 0; }
   .video-frame { min-height: auto; aspect-ratio: 16/9; }
   .commentary-topics > div:last-child, .opportunity-grid { margin-left: 100px; }
+  .press-grid { margin-left: 100px; }
   .commentary-topics > div:last-child { grid-template-columns: 1fr; }
   .hiring-proof > div { grid-template-columns: repeat(2, 1fr); }
 }
@@ -788,10 +801,13 @@ button, input, textarea { font: inherit; }
   .contact-band { padding: 85px 22px; }
   .site-footer { padding: 85px 22px 35px; }
   .home-media, .commentary-topics, .opportunity-section { padding: 85px 22px; }
+  .press-section { padding: 85px 22px; }
   .broadcast-lead, .fit-statement { grid-template-columns: 1fr; padding: 85px 22px; }
   .broadcast-lead > p:first-child { grid-column: 1; }
   .interview-copy { min-height: auto; padding: 55px 22px 70px; }
   .commentary-topics > div:last-child, .opportunity-grid { margin-left: 0; }
+  .press-grid { grid-template-columns: 1fr; margin-left: 0; }
+  .press-grid > a { min-height: 390px; }
   .opportunity-grid, .hiring-proof > div { grid-template-columns: 1fr; }
   .opportunity-grid article { min-height: 390px; }
   .hiring-proof { padding: 85px 22px; }

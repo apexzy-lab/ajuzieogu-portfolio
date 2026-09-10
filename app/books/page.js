@@ -3,7 +3,7 @@ import { books, pageMetadata, siteUrl, webPageSchema } from "../site-data";
 
 export const metadata = pageMetadata(
   "Books",
-  "Books by Uchechukwu Ajuzieogu on artificial intelligence, modern education, Igbo enterprise and business culture.",
+  "Books by Uchechukwu Ajuzieogu on artificial intelligence, modern education, Igbo enterprise and building sustainable side income.",
   "/books"
 );
 
@@ -25,7 +25,7 @@ export default function BooksPage() {
         "@type": "Book",
         name: book.title,
         datePublished: book.year,
-        image: `${siteUrl}${book.image}`,
+        image: book.image.startsWith("http") ? book.image : `${siteUrl}${book.image}`,
         url: book.href,
         author: { "@id": `${siteUrl}/#person` },
       },

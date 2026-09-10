@@ -89,7 +89,7 @@ export default function HomePage() {
           light
         />
         <div className="venture-preview">
-          {ventures.slice(0, 3).map((item, index) => (
+          {[ventures[0], ventures[1], ventures[3]].map((item, index) => (
             <a key={item.title} href={item.href} target="_blank" rel="noreferrer">
               <span>0{index + 1} / {item.type}</span>
               <h3>{item.title}</h3>
@@ -151,7 +151,7 @@ export default function HomePage() {
           <Link href="/books">Enter the library <Arrow /></Link>
         </div>
         <div className="book-stage">
-          {books.map((book, index) => (
+          {books.slice(0, 3).map((book, index) => (
             <a className={`book-object book-${index + 1}`} key={book.title} href={book.href} target="_blank" rel="noreferrer">
               <img src={book.image} alt={`${book.title} book cover`} />
               <span>{book.shortTitle}</span>

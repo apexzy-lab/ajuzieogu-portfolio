@@ -86,8 +86,8 @@ export default function AboutPage() {
       <section className="journey-section">
         <SectionHeading index="04" eyebrow="Selected journey" title="A career built in layers." />
         <div className="timeline">
-          <article><span>Now</span><div><h3>AI economics, policy & institution building</h3><p>Leading Aylgorith and the African Institute for AI Policy while publishing research on markets, governance and African development.</p></div></article>
-          <article><span>Enterprise</span><div><h3>Technology leadership & entrepreneurship</h3><p>Founder of Rova Media Digital, co-founder of LANFarms, and earlier technology leadership across consulting and e-commerce.</p></div></article>
+          <article><span>Now</span><div><h3>Research leadership & product building</h3><p>Leading Veridian Foundation and Aylgorith while building Rackwyse, Casevault and Wayprint around cloud, immigration and travel-information problems.</p></div></article>
+          <article><span>Enterprise</span><div><h3>Technology leadership & entrepreneurship</h3><p>A portfolio spanning B2B software, professional mobility, research publishing, advisory work and earlier technology ventures.</p></div></article>
           <article><span>Education</span><div><h3>Teaching, curriculum & applied learning</h3><p>Experience teaching computer science, machine learning and programming, with continuing interest in vocational education systems.</p></div></article>
           <article><span>Foundation</span><div><h3>Computer Education at UNN</h3><p>Formal study at the University of Nigeria, Nsukka, grounded in the relationship between computing and practical learning.</p></div></article>
         </div>

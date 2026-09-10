@@ -16,6 +16,7 @@ export const navItems = [
 
 export const socialLinks = [
   { href: "https://www.linkedin.com/in/uchechukwu-ajuzieogu", label: "LinkedIn" },
+  { href: "https://scholar.google.com/citations?user=rIeI8KYAAAAJ&hl=en", label: "Google Scholar" },
   { href: "https://www.researchgate.net/profile/Uchechukwu-Ajuzieogu", label: "ResearchGate" },
   { href: "https://x.com/apex_zy", label: "X / Twitter" },
   { href: "https://github.com/apexzy", label: "GitHub" },
@@ -23,40 +24,64 @@ export const socialLinks = [
 
 export const ventures = [
   {
-    type: "Policy & research",
-    title: "African Institute for AI Policy",
-    role: "Founder & Executive Director",
+    type: "Research institution",
+    title: "Veridian Foundation",
+    role: "Co-Founder & Executive Director",
     description:
-      "Advancing African participation in the rules, institutions and economic choices shaping artificial intelligence.",
-    href: "https://africanaipolicy.org/",
+      "An independent research institution advancing technology governance, including the African Institute for Artificial Intelligence Policy.",
+    href: "https://veridianfoundation.org/",
     tone: "electric",
+    schemaType: "Organization",
+  },
+  {
+    type: "FinOps SaaS",
+    title: "Rackwyse",
+    role: "Co-Founder & CEO",
+    description:
+      "Multi-cloud cost intelligence that turns AWS, Azure and Google Cloud billing data into prioritized, explainable savings decisions.",
+    href: "https://rackwyse.com/",
+    tone: "ink",
+    schemaType: "SoftwareApplication",
+  },
+  {
+    type: "Vertical SaaS",
+    title: "Casevault",
+    role: "Founder & CEO",
+    description:
+      "A connected operating system for immigration practices—covering clients, cases, documents, deadlines, billing and communication.",
+    href: "https://casvault.com/",
+    tone: "paper",
+    schemaType: "SoftwareApplication",
+  },
+  {
+    type: "Travel technology",
+    title: "Wayprint",
+    role: "Founder",
+    description:
+      "A private, user-controlled travel-history ledger for recording, reconstructing and exporting years of travel when an application asks.",
+    href: "https://wayprnt.com/",
+    tone: "copper",
+    schemaType: "SoftwareApplication",
   },
   {
     type: "AI economics",
     title: "Aylgorith",
     role: "Founder & Editor-in-Chief",
     description:
-      "Independent research and analysis on AI markets, infrastructure, labor, investment and policy.",
+      "An independent publication analyzing the markets, labor, infrastructure, investment and policy economics of artificial intelligence.",
     href: "https://aylgorith.com/uchechukwu-ajuzieogu/",
     tone: "ink",
+    schemaType: "Organization",
   },
   {
-    type: "Technology",
-    title: "Rova Media Digital",
-    role: "Founder",
+    type: "Professional mobility",
+    title: "Migrz",
+    role: "Co-Founder & CEO",
     description:
-      "Digital products, technology strategy and practical systems built around real organizational needs.",
-    href: "https://www.crunchbase.com/organization/rova-media-digital",
-    tone: "paper",
-  },
-  {
-    type: "Enterprise",
-    title: "LANFarms",
-    role: "Co-founder",
-    description:
-      "An entrepreneurial venture in which technology, operations and people development meet.",
-    href: "https://lanfarms.com/about/",
-    tone: "copper",
+      "Achievement-based immigration strategy that helps accomplished professionals compare global pathways and organize career evidence with care.",
+    href: "https://migrzz.com/",
+    tone: "electric",
+    schemaType: "Organization",
   },
 ];
 
@@ -109,6 +134,16 @@ export const books = [
     image: "/igbo-business-moguls.jpg",
     href: "https://amzn.to/4eNBEnU",
     color: "green",
+  },
+  {
+    year: "2025",
+    title: "The Side Hustle Blueprint: A Gen Z Guide to Building Multiple Income Streams While Working Full-Time",
+    shortTitle: "The Side Hustle Blueprint",
+    description:
+      "A practical roadmap for Gen Z and young professionals who want to develop additional income streams without abandoning the stability of full-time work.",
+    image: "https://m.media-amazon.com/images/I/7107tYfsW+L._SL1500_.jpg",
+    href: "https://www.amazon.com/Side-Hustle-Blueprint-Building-Full-Time-ebook/dp/B0DSBL98VG",
+    color: "yellow",
   },
 ];
 
@@ -188,6 +223,63 @@ export const mediaInterviews = [
   },
 ];
 
+export const pressFeatures = [
+  {
+    outlet: "BusinessDay",
+    date: "2025-07-13",
+    type: "Research feature",
+    title: "Stereotyping: How Nigeria can reclaim global reputation",
+    description:
+      "BusinessDay reports on research by Uchechukwu Ajuzieogu and Maryangel Nnamdi examining the gap between Nigeria's fraud stereotype and available cybercrime data.",
+    href: "https://businessday.ng/news/article/stereotyping-how-nigeria-can-reclaim-global-reputation/",
+  },
+  {
+    outlet: "Bold Journey",
+    date: "2025-12-16",
+    type: "Profile interview",
+    title: "Life, Values & Legacy: Our Chat with Uchechukwu Ajuzieogu",
+    description:
+      "A conversation about the values, decisions and long-term perspective behind Uchechukwu's work and leadership.",
+    href: "https://boldjourney.com/life-values-legacy-our-chat-with-uchechukwu-ajuzieogu-of-market-street-highlight/",
+  },
+  {
+    outlet: "CanvasRebel",
+    date: "2024-08-08",
+    type: "Founder profile",
+    title: "Meet Uchechukwu Ajuzieogu",
+    description:
+      "CanvasRebel's interview on Uchechukwu's entrepreneurial journey, creative thinking and lessons from building across industries.",
+    href: "https://canvasrebel.com/meet-uchechukwu-ajuzieogu/",
+  },
+  {
+    outlet: "Bold Journey",
+    date: "2024-07-02",
+    type: "Career interview",
+    title: "Meet Uchechukwu Ajuzieogu",
+    description:
+      "A career conversation about resilience, learning and the experiences that shaped a multidisciplinary builder.",
+    href: "https://boldjourney.com/meet-uchechukwu-ajuzieogu/",
+  },
+  {
+    outlet: "VoyageHouston",
+    date: "2024-03-19",
+    type: "Entrepreneur profile",
+    title: "Exploring Life & Business with Uchechukwu Ajuzieogu of LANFarms",
+    description:
+      "A profile tracing the path from technology and software engineering into entrepreneurship and impact-led ventures.",
+    href: "https://voyagehouston.com/interview/exploring-life-business-with-uchechukwu-ajuzieogu-of-lanfarms/",
+  },
+  {
+    outlet: "Shoutout HTX",
+    date: "2024-01-04",
+    type: "Founder interview",
+    title: "Meet Uchechukwu Ajuzieogu — Software Engineer & Entrepreneur",
+    description:
+      "An interview on work, resilience, startup leadership and the practical relationship between technology and enterprise.",
+    href: "https://shoutouthtx.com/meet-uchechukwu-ajuzieogu-software-engineer-entrepreneur/",
+  },
+];
+
 export const memberships = [
   "IEEE Computer Society",
   "Association for Computing Machinery",
@@ -220,6 +312,7 @@ export const personSchema = {
   sameAs: [
     "https://www.linkedin.com/in/uchechukwu-ajuzieogu",
     "https://www.researchgate.net/profile/Uchechukwu-Ajuzieogu",
+    "https://scholar.google.com/citations?user=rIeI8KYAAAAJ&hl=en",
     "https://x.com/apex_zy",
     "https://github.com/apexzy",
     "https://aylgorith.com/uchechukwu-ajuzieogu/",
@@ -254,7 +347,10 @@ const pageKeywords = {
   ],
   "/work": [
     "Uchechukwu Ajuzieogu ventures",
-    "African Institute for AI Policy founder",
+    "Veridian Foundation co-founder",
+    "Rackwyse cloud cost optimization",
+    "Casevault immigration software",
+    "Wayprint travel history ledger",
     "Aylgorith founder",
     "African technology entrepreneur",
   ],
@@ -269,6 +365,7 @@ const pageKeywords = {
     "books by Uchechukwu Ajuzieogu",
     "Artificial Intelligence in Modern Education book",
     "Igbo Business Moguls book",
+    "The Side Hustle Blueprint Gen Z book",
   ],
   "/speaking": [
     "AI policy speaker Africa",
