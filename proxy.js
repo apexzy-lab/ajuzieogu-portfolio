@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 const canonicalHost = "ajuzieogu.com";
 
 export function proxy(request) {
-  const requestHost = request.headers.get("host")?.split(":")[0].toLowerCase();
+  const requestHost = request.nextUrl.hostname.toLowerCase();
 
   if (requestHost === `www.${canonicalHost}`) {
     const canonicalUrl = request.nextUrl.clone();
